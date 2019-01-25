@@ -10,12 +10,13 @@ namespace AnimFollow
 		// Add this script to the ragdoll
 		
 		public readonly int version = 7; // The version of this script
+        public GameObject mainCam;
 
-		// Variables (expand #region by clicking the plus)
-#region
+        // Variables (expand #region by clicking the plus)
+        #region
 
 #if RAGDOLLCONTROL
-		RagdollControl_AF ragdollControl;
+        RagdollControl_AF ragdollControl;
 #endif
 
 		public GameObject master; // ASSIGN IN INSPECTOR!
@@ -315,7 +316,9 @@ namespace AnimFollow
 				slaveRigidTransform.GetComponent<Rigidbody>().maxAngularVelocity = maxAngularVelocity;
 				i++;
 			}
-		}
+
+            mainCam.SetActive(true);
+        }
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

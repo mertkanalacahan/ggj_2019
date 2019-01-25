@@ -11,11 +11,11 @@ namespace AnimFollow
 		
 		public readonly int version = 7; // The version of this script
 
-	//	 This kind of a state machine that takes the character through the states: colliding, falling, matching the masters pose and getting back up
+        //	 This kind of a state machine that takes the character through the states: colliding, falling, matching the masters pose and getting back up
 
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		AnimFollow_AF animFollow;				// The script that controlls the muscles of the ragdoll
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///
+        AnimFollow_AF animFollow;				// The script that controlls the muscles of the ragdoll
 		PlayerMovement_AF playerMovement;			// To tell the character controller to no move when we are dosed off after a collision.
 		Animator animator;							// Reference to the animator component.
 		HashIDs_AF hash;							// Reference to the HashIDs.
