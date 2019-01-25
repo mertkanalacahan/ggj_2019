@@ -43,9 +43,9 @@ namespace AnimFollow
 		[Range(0f, 120f)] public float residualJointTorque = 120f;
 		[Range(0f, 1f)] public float residualIdleFactor = 0f; // Allows for lower residual strength if hit when in idle animation
 
-		[Range(2f, 1000f)] public float graceSpeed = 50f;			// The relative speed limit for a collision to make the character dose off
-		[Range(.1f, 1000f)] public float noGhostLimit = 50f;		// The Limit of limbError that is allowed before the character doses off, given certain conditions
-		[Range(5f, 1000f)] public float noGhostLimit2 = 100f;		// The Limit of limbError that is allowed before the character doses off, under all circumastances. This prevents you from going through walls like a ghost :)
+		[Range(0.01f, 1000f)] public float graceSpeed = 8f;			// The relative speed limit for a collision to make the character dose off
+		[Range(0.01f, 1000f)] public float noGhostLimit = 2f;		// The Limit of limbError that is allowed before the character doses off, given certain conditions
+		[Range(0.01f, 1000f)] public float noGhostLimit2 = 45f;		// The Limit of limbError that is allowed before the character doses off, under all circumastances. This prevents you from going through walls like a ghost :)
 		[Range(0f, 1.2f)] public float glideFree = .3f;			// makes the character glide free from an object if collision is not severe
 
 		// These are shown in the inspector for you to get a feel for the states
