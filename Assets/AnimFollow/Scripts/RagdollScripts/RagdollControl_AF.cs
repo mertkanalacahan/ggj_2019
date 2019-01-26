@@ -188,6 +188,22 @@ namespace AnimFollow
             mainCam.SetActive(true);
         }
 
+        private void Update()
+        {
+            if(falling)
+            {
+                noGhostLimit = 9999999f;
+                noGhostLimit2 = 9999999f;
+                graceSpeed = 9999999f;
+            }
+            else
+            {
+                noGhostLimit = 0.5f;
+                noGhostLimit2 = 15f;
+                graceSpeed = 8f;
+            }
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public void DoRagdollControl() // Needs to be synced with AnimFollow
