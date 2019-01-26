@@ -7,9 +7,11 @@ namespace AnimFollow
 {
 	public class RagdollControl_AF : MonoBehaviour
 	{
-		// Add this script to the ragdoll
-		
-		public readonly int version = 7; // The version of this script
+        // Add this script to the ragdoll
+
+        public GameObject mainCam;
+
+        public readonly int version = 7; // The version of this script
 
         //	 This kind of a state machine that takes the character through the states: colliding, falling, matching the masters pose and getting back up
 
@@ -43,9 +45,9 @@ namespace AnimFollow
 		[Range(0f, 120f)] public float residualJointTorque = 120f;
 		[Range(0f, 1f)] public float residualIdleFactor = 0f; // Allows for lower residual strength if hit when in idle animation
 
-		[Range(0.01f, 1000f)] public float graceSpeed = 8f;			// The relative speed limit for a collision to make the character dose off
-		[Range(0.01f, 1000f)] public float noGhostLimit = 2f;		// The Limit of limbError that is allowed before the character doses off, given certain conditions
-		[Range(0.01f, 1000f)] public float noGhostLimit2 = 45f;		// The Limit of limbError that is allowed before the character doses off, under all circumastances. This prevents you from going through walls like a ghost :)
+		[Range(0.01f, 999999f)] public float graceSpeed = 8f;			// The relative speed limit for a collision to make the character dose off
+		[Range(0.01f, 999999f)] public float noGhostLimit = 2f;		// The Limit of limbError that is allowed before the character doses off, given certain conditions
+		[Range(0.01f, 999999f)] public float noGhostLimit2 = 45f;		// The Limit of limbError that is allowed before the character doses off, under all circumastances. This prevents you from going through walls like a ghost :)
 		[Range(0f, 1.2f)] public float glideFree = .3f;			// makes the character glide free from an object if collision is not severe
 
 		// These are shown in the inspector for you to get a feel for the states
@@ -182,11 +184,13 @@ namespace AnimFollow
 				Debug.LogWarning("RagdollControll script is version " + version + " but playerMovement script is version " + playerMovement.version + "\n");
 			if (playerMovement.GetComponent<HashIDs_AF>().version != version)
 				Debug.LogWarning("RagdollControll script is version " + version + " but HashIDs script is version " + playerMovement.GetComponent<HashIDs_AF>().version + "\n");
-		}
 
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            mainCam.SetActive(true);
+        }
 
-		public void DoRagdollControl() // Needs to be synced with AnimFollow
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public void DoRagdollControl() // Needs to be synced with AnimFollow
 		{
 			if (userNeedsToAssignStuff)
 				return;
