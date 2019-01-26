@@ -266,7 +266,7 @@ namespace AnimFollow
 
 				shotByBullet = false;
 				falling = true;
-				//gettingUp = false;
+				gettingUp = false;
 				orientated = false;
 				animator.speed = animatorSpeed;
 				delayedGetupDone = false;
