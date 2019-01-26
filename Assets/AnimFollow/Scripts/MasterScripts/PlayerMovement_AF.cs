@@ -13,7 +13,7 @@ namespace AnimFollow
 		HashIDs_AF hash;			// Reference to the HashIDs.
 
 		public float animatorSpeed = 1.3f; // Read by RagdollControl
-		public float speedDampTime = .1f;	// The damping for the speed parameter
+		public float speedDampTime = .01f;	// The damping for the speed parameter
 		float mouseInput;
 		public float mouseSensitivityX = 100f;
 		public bool inhibitMove = false; // Set from RagdollControl
@@ -74,17 +74,17 @@ namespace AnimFollow
 			if(vertical >= .1f && !walk)
 			{
 				// ... set the speed parameter to 5.5f.
-				anim.SetFloat(hash.speedFloat, 5.5f, speedDampTime, Time.fixedDeltaTime);
+				anim.SetFloat(hash.speedFloat, 4f, speedDampTime, Time.fixedDeltaTime);
 			}
 			else if(vertical >= .1f && walk)
 			{
 				// ... set the speed parameter to 5.5f.
-				anim.SetFloat(hash.speedFloat, 2.5f, speedDampTime, Time.fixedDeltaTime);
+				anim.SetFloat(hash.speedFloat, 3f, speedDampTime, Time.fixedDeltaTime);
 			}
 			else if(vertical <= -.1f)
 			{
 				// ... set the speed parameter to -3f.
-				anim.SetFloat(hash.speedFloat, -3f, speedDampTime, Time.fixedDeltaTime);
+				anim.SetFloat(hash.speedFloat, -3.5f, speedDampTime, Time.fixedDeltaTime);
 			}
 			else
 				// Otherwise set the speed parameter to 0.

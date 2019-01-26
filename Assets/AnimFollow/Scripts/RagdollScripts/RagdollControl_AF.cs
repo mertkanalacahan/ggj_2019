@@ -184,24 +184,25 @@ namespace AnimFollow
 				Debug.LogWarning("RagdollControll script is version " + version + " but playerMovement script is version " + playerMovement.version + "\n");
 			if (playerMovement.GetComponent<HashIDs_AF>().version != version)
 				Debug.LogWarning("RagdollControll script is version " + version + " but HashIDs script is version " + playerMovement.GetComponent<HashIDs_AF>().version + "\n");
-
-            mainCam.SetActive(true);
         }
 
         private void Update()
         {
-            if(falling)
+            if (falling || gettingUp)
             {
                 noGhostLimit = 9999999f;
                 noGhostLimit2 = 9999999f;
                 graceSpeed = 9999999f;
             }
+
             else
             {
                 noGhostLimit = 0.5f;
                 noGhostLimit2 = 15f;
                 graceSpeed = 8f;
             }
+
+            mainCam.SetActive(true);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
