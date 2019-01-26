@@ -127,7 +127,7 @@ namespace SWS
             //get Transform array with waypoint positions
             waypoints = new Transform[pathContainer.waypoints.Length];
             Array.Copy(pathContainer.waypoints, waypoints, pathContainer.waypoints.Length);
-            
+
             //initialize waypoint positions
             startPoint = Mathf.Clamp(startPoint, 0, waypoints.Length - 1);
             int index = startPoint;
