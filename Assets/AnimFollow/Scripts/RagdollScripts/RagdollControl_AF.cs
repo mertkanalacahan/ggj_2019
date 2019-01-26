@@ -266,7 +266,7 @@ namespace AnimFollow
 
 				shotByBullet = false;
 				falling = true;
-				gettingUp = false;
+				//gettingUp = false;
 				orientated = false;
 				animator.speed = animatorSpeed;
 				delayedGetupDone = false;
@@ -276,8 +276,8 @@ namespace AnimFollow
 			{	
 				if (gettingUp)
 				{
-					// Wait until transition to getUp is done so that the master animation is lying down before orientating the master to the ragdoll rotation and position
-					if (orientate && !isInTransitionToGetup && wasInTransitionToGetup)
+                    // Wait until transition to getUp is done so that the master animation is lying down before orientating the master to the ragdoll rotation and position
+                    if (orientate && !isInTransitionToGetup && wasInTransitionToGetup)
 					{
 						falling = false;
 
