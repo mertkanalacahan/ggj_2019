@@ -36,7 +36,6 @@ namespace AnimFollow
 				{
 					ragdollControl.numberOfCollisions++;
 					ragdollControl.collisionSpeed = collision.relativeVelocity.magnitude;
-				    Debug.Log (ragdollControl.collisionSpeed + "\n");
 				}
 			}
 		}

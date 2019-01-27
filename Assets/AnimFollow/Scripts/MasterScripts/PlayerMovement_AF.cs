@@ -67,8 +67,6 @@ namespace AnimFollow
 		public void MovementManagement (float vertical, bool walk, bool sneaking)
 		{
 			walk = walk || inhibitRun;
-			// Set the sneaking parameter to the sneak input.
-			anim.SetBool(hash.sneakingBool, sneaking);
 			
 			// If there is some axis input...
 			if(vertical >= .1f && !walk)

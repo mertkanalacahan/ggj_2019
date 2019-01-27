@@ -78,6 +78,7 @@ ModelImporter:
     7400000: Running
     9500000: //RootNode
     13700000: main
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -93,7 +94,10 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'mixamorig:Spine2' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -223,14 +227,6 @@ ModelImporter:
         modified: 0
     - boneName: mixamorig:Spine1
       humanName: Chest
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: mixamorig:Spine2
-      humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -416,7 +412,7 @@ ModelImporter:
     - name: mixamorig:LeftUpLeg
       parentName: mixamorig:Hips
       position: {x: -0.114301, y: -0.030703276, z: -0.0012977374}
-      rotation: {x: -0.10459857, y: 0.17869025, z: 0.9783001, w: 0.007603297}
+      rotation: {x: -0.104598574, y: 0.17869027, z: 0.97830015, w: 0.0076032975}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftLeg
       parentName: mixamorig:LeftUpLeg
@@ -451,7 +447,7 @@ ModelImporter:
     - name: mixamorig:RightFoot
       parentName: mixamorig:RightLeg
       position: {x: -1.0942358e-13, y: 0.10766772, z: -2.4942225e-11}
-      rotation: {x: 0.42036727, y: 0.07405287, z: 0.018621497, w: 0.90413535}
+      rotation: {x: 0.4203673, y: 0.07405288, z: 0.018621499, w: 0.9041354}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightToeBase
       parentName: mixamorig:RightFoot
@@ -536,7 +532,7 @@ ModelImporter:
     - name: mixamorig:RightShoulder
       parentName: mixamorig:Spine2
       position: {x: 0.05328085, y: 0.06920246, z: -0.00010477407}
-      rotation: {x: 0.5654799, y: 0.45054963, z: -0.5384071, w: 0.43284562}
+      rotation: {x: 0.56547993, y: 0.45054963, z: -0.53840715, w: 0.43284562}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightArm
       parentName: mixamorig:RightShoulder
@@ -551,7 +547,7 @@ ModelImporter:
     - name: mixamorig:RightHand
       parentName: mixamorig:RightForeArm
       position: {x: -9.491496e-12, y: 0.12195602, z: -3.9119073e-11}
-      rotation: {x: -0.08042365, y: -0.12693891, z: 0.03389202, w: 0.9880637}
+      rotation: {x: -0.08042366, y: -0.12693892, z: 0.033892024, w: 0.98806375}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightHandIndex1
       parentName: mixamorig:RightHand
